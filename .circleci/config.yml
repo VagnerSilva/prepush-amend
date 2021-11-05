@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: 'circleci/node'
+    steps:
+      - checkout
+      - run:
+          name: pnpm
+          command: sudo npm install -g pnpm
+      - restore_cache:
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: install
+          command: pnpm install --frozen-lockfile
+      - save_cache:
+          key: dependency-cache-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
+      - run:
+          name: build
+          command: pnpm run build
+      - run:
+          name: release
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "main" ]; then
+              pnpm run semantic-release || true
+            fi
