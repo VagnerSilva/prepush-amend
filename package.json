@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --bail",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "build": "rimraf ./dist && tsc -p tsconfig.json",
@@ -32,20 +32,33 @@
       "path": "git-cz"
     }
   },
+  "dependencies": {
+    "cosmiconfig": "^7.0.1",
+    "debug": "^4.3.2",
+    "execa": "^5.1.1",
+    "normalize-path": "^3.0.0"
+  },
   "devDependencies": {
+    "@jest/types": "^27.2.5",
+    "@types/cosmiconfig": "^6.0.0",
+    "@types/debug": "^4.1.7",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "commitizen": "^4.2.4",
-    "eslint": "^8.1.0",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
+    "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^18.0.0",
     "semantic-release-cli": "^5.4.4",
+    "ts-jest": "^27.0.7",
     "typescript": "^4.4.4"
   }
 }

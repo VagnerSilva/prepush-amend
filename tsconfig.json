@@ -5,12 +5,14 @@
     "lib": ["ESNext"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
 
     /* Modules */
     "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "./",
-    "types": [],
+    "baseUrl": ".",
 
     /* JavaScript Support */
     "allowJs": true,
@@ -30,6 +32,6 @@
   ],
   "include": [
     "./src/",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts" 
   ]
 }
