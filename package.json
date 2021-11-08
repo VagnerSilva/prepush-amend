@@ -10,7 +10,8 @@
     "semantic-release": "semantic-release",
     "build": "rimraf ./dist && tsc -p tsconfig.json",
     "commit": "git-cz",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "watch": "tsc -p tsconfig.json --watch"
   },
   "repository": {
     "type": "git",
