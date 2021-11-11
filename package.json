@@ -37,13 +37,19 @@
     "cosmiconfig": "^7.0.1",
     "debug": "^4.3.2",
     "execa": "^5.1.1",
-    "normalize-path": "^3.0.0"
+    "listr": "^0.14.3"
   },
   "devDependencies": {
     "@jest/types": "^27.2.5",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.2",
     "@types/cosmiconfig": "^6.0.0",
     "@types/debug": "^4.1.7",
     "@types/jest": "^27.0.2",
+    "@types/listr": "^0.14.4",
     "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
